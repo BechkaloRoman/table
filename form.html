@@ -1,54 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    
-     <form method="post" action="https://formspree.io/bechkalor@gmail.com">
-    
-        <label>Client name:
-            <input type="text" name="client-name" required
-             placeholder="Your name">
-        </label>
-        <br>
-        <label for="client-email">Client email:</label>
-        <input type="email" name="client-email" 
-            id="client-email" required>
-        <br>
-        <label>Password:
-            <input type="password" name="client-password">
-        </label>
-        <br>
+
+    <form method="POST"  action="https://formspree.io/bechkalor@gmail.com">
         <label>Gender:</label>
-        <br>
         <label>
-            <input type="radio" name="client-gender" value="male">
-            Male
+            <br>
+            <input type="radio" name="gender" value="Male">Male:
         </label>
         <label>
-            <input type="radio" name="client-gender" value="female">
-            Female
+            <input type="radio" name="gender" value="Female">Female:
         </label>
         <label>
-            <input type="radio" name="client-gender" value="other"
-                checked>
-            Other
-            
+            <input type="radio" name="gender" value="Other">Other:
         </label>
         <br>
-        <input type="text" name="cer-plete" required
-        pattern="[A-Z]{2}[\d]{4}[A-Z]{2}"
-        placeholder="AA1234BB"
-            title="AA1234BB">
-         
         <br>
-        <input type="submit" value="SEND">
-        <input type="reset" value="BLANK">
+        <label>Country:*
+            <input list="<list>" placeholder="Your country" required>
+            <datalist id="<list>">
+             <option value="Ukraine">
+            <option value=" Belarus ">
+            <option value=" Poland">
+            <option value=" Hungary">      
+             <option value=" Slovakia ">
+              <option value="  Romania ">
+             <option value=" Moldova ">
+            </datalist>
+            <br>
+        </label>
+        <br>
+        <label>Name:*
+        <input type="text" name="client-name" placeholder="Your Name" maxlength="12" required  >
+        <br>
+        </label>
+        <br>
+        <label>Email:*
+            <input type="email" name="email" placeholder="Your Email" required maxlength="30" >
+            <br>
+            </label>
+        <br>
+        <label>Your phone namber:*
+            <input type="tel" name="phone-namber" maxlength="13" placeholder="+38-XXX-XX-XX-XXX" required >
+            <br>
+        </label>
+        <br>
+        <label>Password:*
+            <input type="password" maxlength="8" name="password" placeholder="Your password" required>
+            <br>
+        </label>
+        <br>
+        <label>Choose color:
+            <input type="color" name="color">
+            <br>
+        </label>
+        <br>
+        <label>Choose month and year:
+            <input type="month" min="1950-01" max="2009-12" name="month">
+            <br>
+        </label>
+        <br>
+        <label>Search:
+        <br>
+            <input type="search" name="search" placeholder="Search">
+          
+            <br>
+        </label>
+        <br>
+        <label>Select the value:
+        <br>
+            <input type="range" list="tickmarks">
+            <datalist id="tickmarks">
+                  <option value="0" >
+                  <option value="10">
+                  <option value="20">
+                  <option value="30">
+                  <option value="40">
+                  <option value="50">
+                  <option value="60">
+                  <option value="70">
+                  <option value="80">
+                 <option value="90">
+                  <option value="100">
+            </datalist>
+            </label>
+        <br>
+          <p><b>Count it:  2+2*2-2=?</b></p>
+        <label>
+             <input type="radio" name="2+2*2-2=" value="0">0
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="2+2*2-2=" value="4">4
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="2+2*2-2=" value="6">6
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="2+2*2-2=" value="8">8
+        </label>
+        <br>
+        <p>Confirm:</p>
+        <label>
+            <input type="radio" name="i'm not a robot">-i'm not a robot
+        </label>
+        <br>
+        <br>
+        <label>Your message:<br></label>
+        <textarea rows="8" cols="30" autofocus>
+        </textarea>
+        <br>
+            <input type="submit" value="SEND">
+            <input type="reset" value="Reset">
     </form>
-    
 </body>
 </html>
